@@ -1,11 +1,12 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Search, LayoutGrid, LineChart, Activity, Trophy, Bell, DollarSign, Users, Star, Menu } from 'lucide-react'
+import LoginModal from '@/components/login-modal' // Import the LoginModal component
 
 const featuredMarkets = [
   { id: 1, title: '2024 Election Forecast', image: '/K&T.png?height=150&width=150', color: 'bg-indigo-600', action: 'View' },
@@ -251,6 +252,8 @@ const MarketCard = ({ market }: { market: Market }) => (
 )
 
 export function LandingPageComponent() {
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false) // State for modal visibility
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b border-border">
@@ -279,8 +282,8 @@ export function LandingPageComponent() {
             <Button variant="ghost" size="sm"><LineChart className="mr-2 h-4 w-4" /> Election</Button>
             <Button variant="ghost" size="sm"><Activity className="mr-2 h-4 w-4" /> Activity</Button>
             <Button variant="ghost" size="sm"><Trophy className="mr-2 h-4 w-4" /> Ranks</Button>
-            <Button variant="ghost" size="sm">Log In</Button>
-            <Button variant="default" size="sm">Sign Up</Button>
+            <Button variant="ghost" size="sm" onClick={() => setIsLoginModalOpen(true)}>Log In</Button>
+            <Button variant="default" size="sm" onClick={() => setIsLoginModalOpen(true)}>Sign Up</Button>
             <Button variant="ghost" size="sm"><Menu className="h-5 w-5" /></Button>
           </div>
         </div>
@@ -415,6 +418,8 @@ export function LandingPageComponent() {
           </div>
         </div>
       </footer>
+
+      <LoginModal isOpen={isLoginModalOpen} onClose={() => setIsLoginModalOpen(false)} />
     </div>
   )
 }
