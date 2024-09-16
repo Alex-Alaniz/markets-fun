@@ -9,10 +9,10 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Search, LayoutGrid, LineChart, Activity, Trophy, Bell, DollarSign, Users, Star } from 'lucide-react'
 
 const featuredMarkets = [
-  { id: 1, title: '2024 Election Forecast', image: '/placeholder.svg?height=150&width=150', color: 'bg-indigo-600', action: 'View' },
-  { id: 2, title: '2024 Presidential Election', image: '/placeholder.svg?height=150&width=150', color: 'bg-rose-600', action: 'Bet now' },
-  { id: 3, title: 'U.S. Recession in 2024?', image: '/placeholder.svg?height=150&width=150', color: 'bg-amber-600', action: 'Bet now' },
-  { id: 4, title: 'Trade Elections', image: '/placeholder.svg?height=150&width=150', color: 'bg-emerald-600', action: 'Add funds', subtitle: 'Add funds to start trading today' },
+  { id: 1, title: '2024 Election Forecast', image: '/K&T.png?height=150&width=150', color: 'bg-indigo-600', action: 'View' },
+  { id: 2, title: '2024 Presidential Election', image: '/PE24.webp?height=150&width=150', color: 'bg-rose-600', action: 'Bet now' },
+  { id: 3, title: 'U.S. Recession in 2024?', image: '/USR.jpg?height=150&width=150', color: 'bg-amber-600', action: 'Bet now' },
+  { id: 4, title: 'Trade Elections', image: '/TE24.avif?height=150&width=150', color: 'bg-emerald-600', action: 'Add funds', subtitle: 'Add funds to start trading today' },
 ]
 
 const marketCategories = ['Top', 'For You', 'New', 'Breaking News', 'US Election', 'NFL', 'Emmys', 'Mention Markets', 'Middle East', 'Swing States', 'Polling', 'Economy', 'Kamala', 'Ukraine']
@@ -190,7 +190,16 @@ const topVolume = [
   { id: 5, name: 'PredictKing', volume: '$4,321,098' },
 ]
 
-const MarketCard = ({ market }) => (
+interface Market {
+  icon: string;
+  title: string;
+  options: Array<{ name: string; probability: number }>;
+  totalBet: string;
+  traders: number;
+  isMonthly: boolean;
+}
+
+const MarketCard = ({ market }: { market: Market }) => (
   <Card className="bg-card border-border">
     <CardHeader className="pb-2">
       <div className="flex items-center justify-between">
