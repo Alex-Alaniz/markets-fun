@@ -33,13 +33,11 @@ export default function LoginModal({ isOpen, onClose }: { isOpen: boolean; onClo
         }
       } else if (walletName === 'Coinbase Wallet') {
         const coinbaseWallet = new CoinbaseWalletSDK({
-          appName: 'Your App Name',
+          appName: 'MarketFun',
           appLogoUrl: 'https://example.com/logo.png',
-          darkMode: false,
         });
 
-        const provider = coinbaseWallet.makeWeb3Provider('https://mainnet.infura.io/v3/YOUR_INFURA_PROJECT_ID', 1);
-        await provider.enable();
+        const provider = coinbaseWallet.makeWeb3Provider();
         const ethersProvider = new ethers.BrowserProvider(provider);
         const signer = await ethersProvider.getSigner();
         const address = await signer.getAddress();
@@ -78,13 +76,13 @@ export default function LoginModal({ isOpen, onClose }: { isOpen: boolean; onClo
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle className="text-center">Log in</DialogTitle>
-          <Button variant="ghost" className="absolute right-4 top-4 rounded-sm opacity-70" onClick={onClose}>
+          <Button className="absolute right-4 top-4 rounded-sm opacity-70" onClick={onClose}>
             <X className="h-4 w-4" />
             <span className="sr-only">Close</span>
           </Button>
         </DialogHeader>
         <div className="space-y-4 py-4">
-          <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white" variant="default" onClick={handleEmailSignUp}>
+          <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white" onClick={handleEmailSignUp}>
             <img src="/google-icon-logo.svg" alt="Google" className="w-5 h-5 mr-2" />
             Continue with Google
           </Button>
