@@ -257,9 +257,9 @@ export function LandingPageComponent() {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false) // State for modal visibility
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <div className="min-h-screen bg-[#1C2237] text-white dark:bg-gray-900 dark:text-gray-100">
-        <header className="border-b border-[#2C3444] dark:border-gray-700">
+    <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+      <div className="min-h-screen bg-white text-gray-900 dark:bg-[#1C2237] dark:text-white">
+      <header className="border-b border-gray-200 dark:border-[#2C3444]">
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
             <div className="flex items-center space-x-8">
               <div className="flex items-center space-x-2">
@@ -281,22 +281,22 @@ export function LandingPageComponent() {
               </div>
             </div>
             <div className="flex items-center space-x-6">
-              <Button variant="ghost" size="sm" className="text-white dark:text-gray-300"><LayoutGrid className="mr-2 h-4 w-4" /> Markets</Button>
-              <Button variant="ghost" size="sm" className="text-white dark:text-gray-300"><LineChart className="mr-2 h-4 w-4" /> Election</Button>
-              <Button variant="ghost" size="sm" className="text-white dark:text-gray-300"><Activity className="mr-2 h-4 w-4" /> Activity</Button>
-              <Button variant="ghost" size="sm" className="text-white dark:text-gray-300"><Trophy className="mr-2 h-4 w-4" /> Ranks</Button>
-              <Button variant="ghost" size="sm" className="text-white dark:text-gray-300" onClick={() => setIsLoginModalOpen(true)}>Log In</Button>
-              <Button variant="default" size="sm" className="bg-blue-500 hover:bg-blue-600 text-white">Sign Up</Button>
+              <Button variant="ghost" size="sm" className="text-gray-700 dark:text-white"><LayoutGrid className="mr-2 h-4 w-4" /> Markets</Button>
+              <Button variant="ghost" size="sm" className="text-gray-700 dark:text-white"><LineChart className="mr-2 h-4 w-4" /> Election</Button>
+              <Button variant="ghost" size="sm" className="text-gray-700 dark:text-white"><Activity className="mr-2 h-4 w-4" /> Activity</Button>
+              <Button variant="ghost" size="sm" className="text-gray-700 dark:text-white"><Trophy className="mr-2 h-4 w-4" /> Ranks</Button>
+              <Button variant="ghost" size="sm" className="text-gray-700 dark:text-white"onClick={() => setIsLoginModalOpen(true)}>Log In</Button>
+              <Button variant="default" size="sm" className="bg-blue-500 hover:bg-blue-600 text-white"onClick={() => setIsLoginModalOpen(true)}>Sign Up</Button>
               <BurgerMenu />
             </div>
           </div>
         </header>
 
-        <nav className="bg-[#2C3444] dark:bg-gray-800 py-2">
+        <nav className="bg-gray-100 dark:bg-[#2C3444] py-2">
           <div className="container mx-auto px-4 flex items-center space-x-4 overflow-x-auto">
             <span className="text-red-500 font-semibold whitespace-nowrap">LIVE</span>
             {['All', 'New', 'Politics', 'Crypto', 'Sports', 'Pop Culture', 'Business', 'Science'].map((item) => (
-              <Button key={item} variant="ghost" size="sm" className="text-gray-300 hover:text-white whitespace-nowrap dark:text-gray-400 dark:hover:text-white">{item}</Button>
+              <Button key={item} variant="ghost" size="sm" className="text-gray-700 hover:text-gray-900 whitespace-nowrap dark:text-gray-300 dark:hover:text-white">{item}</Button>
             ))}
           </div>
         </nav>
