@@ -258,7 +258,7 @@ export function LandingPageComponent() {
 
   return (
     <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-      <div className="min-h-screen bg-white text-gray-900 dark:bg-[#1C2237] dark:text-white">
+      <div className="min-h-screen bg-white text-gray-900 dark:bg-[#192631] dark:text-white">
       <header className="border-b border-gray-200 dark:border-[#2C3444]">
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
             <div className="flex items-center space-x-8">
@@ -292,7 +292,7 @@ export function LandingPageComponent() {
           </div>
         </header>
 
-        <nav className="bg-gray-100 dark:bg-[#2C3444] py-2">
+        <nav className="bg-w-100 dark:bg-[#192631] py-2">
           <div className="container mx-auto px-4 flex items-center space-x-4 overflow-x-auto">
             <span className="text-red-500 font-semibold whitespace-nowrap">LIVE</span>
             {['All', 'New', 'Politics', 'Crypto', 'Sports', 'Pop Culture', 'Business', 'Science'].map((item) => (

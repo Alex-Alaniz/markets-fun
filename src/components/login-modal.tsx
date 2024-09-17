@@ -102,7 +102,7 @@ export default function LoginModal({ isOpen, onClose }: { isOpen: boolean; onClo
             <WalletOption name="MetaMask" icon="/MetaMask.png" onConnect={() => connectWallet('MetaMask')} />
             <WalletOption name="Coinbase Wallet" icon="/cbw.svg" onConnect={() => connectWallet('Coinbase Wallet')} />
             <WalletOption name="Phantom" icon="/phantom.png" onConnect={() => connectWallet('Phantom')} />
-            <WalletOption name="WalletConnect" icon="/wc.png" onConnect={() => connectWallet('WalletConnect')} />
+            <WalletOption name="WalletConnect" icon="/wc.svg" onConnect={() => connectWallet('WalletConnect')} />
           </div>
           <div className="text-center text-sm text-gray-500">
             <a href="#" className="hover:underline">Privacy</a>

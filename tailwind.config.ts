@@ -23,6 +23,7 @@ const config: Config = {
   			foreground: 'hsl(var(--foreground))',
   			card: {
   				DEFAULT: 'hsl(var(--card))',
+				dark: '#253745',
   				foreground: 'hsl(var(--card-foreground))'
   			},
   			popover: {
