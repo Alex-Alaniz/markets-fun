@@ -277,7 +277,7 @@ export function LandingPageComponent() {
               </div>
               <div className="relative w-96">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
-                <Input className="pl-10 bg-[#2C3444] border-[#2C3444] w-full text-white placeholder-gray-400 dark:bg-gray-700 dark:border-gray-600" placeholder="Search markets" />
+                <Input className="pl-10 bg-white border-[#2C3444] w-full text-white placeholder-gray-400 dark:bg-gray-700 dark:border-gray-600" placeholder="Search markets" />
               </div>
             </div>
             <div className="flex items-center space-x-6">
