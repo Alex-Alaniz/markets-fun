@@ -417,7 +417,7 @@ export function LandingPageComponent() {
               </div>
             </div>
             <div className="mt-8 text-center text-muted-foreground">
-              <p>&copy; 2023 MarkeFun. All rights reserved.</p>
+              <p>&copy; 2023 MarkeFun. All rights reserved. Demo version by <a href="https://x.com/AlexDotEth" target="_blank" className="text-muted-foreground hover:text-foreground">Alex Alaniz</a></p>
             </div>
           </div>
         </footer>
