@@ -379,7 +379,7 @@ export function LandingPageComponent() {
           </div>
         </main>
 
-        <footer className="bg-[#1C2237] dark:bg-gray-900 text-white dark:text-gray-300 py-8">
+        <footer className="bg-white dark:bg-gray-900 text-white dark:text-gray-300 py-8">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-4 gap-8">
               <div>
